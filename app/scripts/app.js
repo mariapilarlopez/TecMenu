@@ -5,13 +5,17 @@
  * as a dependency to the Angular modules.
  */
 angular.module('appverseClientIncubatorApp', ['ui.bootstrap'])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainShowIntro'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+        .config(function($routeProvider) {
+            $routeProvider
+                    .when('/', {
+                        templateUrl: 'views/main.html',
+                        controller: 'MainShowIntro'
+                    })
+                    .when('/proactiveTechnologySelection', {
+                        templateUrl: 'views/proactiveTechnologySelection/list.html',
+                        controller: 'MainShowIntro'
+                    })
+                    .otherwise({
+                        redirectTo: '/'
+                    });
+        });
