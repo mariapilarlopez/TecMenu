@@ -15,6 +15,10 @@ angular.module('appverseClientIncubatorApp', ['ui.bootstrap'])
                         templateUrl: 'views/proactiveTechnologySelection/list.html',
                         controller: 'MainShowIntro'
                     })
+                    .when('/proactiveTechnologySelection/detail/:id', {
+                        templateUrl: 'views/proactiveTechnologySelection/detail.html',
+                        controller: 'ShowDetail'
+                    })
                     .otherwise({
                         redirectTo: '/'
                     });
